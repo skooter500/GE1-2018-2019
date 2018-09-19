@@ -1,5 +1,4 @@
-# GE1-2018-2019
-DT228/DT211/DT282/DT508 Games Engines 1 2018-2019
+# DT228/DT211/DT282/DT508 Games Engines 1 2018-2019
 
 ## Resources
 - [Class Facebook page](https://www.facebook.com/groups/2228012700814097/)
