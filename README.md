@@ -8,16 +8,15 @@
 - [A build of Infinite Forms](https://drive.google.com/open?id=1-uQZ4sXe51rlda7OPd3M6NyeTsrte2b6)
 - [A spotify playlist of music to listen to while coding](https://open.spotify.com/user/1155805407/playlist/5NYFsIFTgNOI93hONLbqNI)
 - [Exploring the Psychedelic Experience through Virtual Reality](https://www.facebook.com/askdirectdublin/videos/10155614575684395/)
+- [Unity Tutorials](https://unity3d.com/learn/tutorials) 
+- [GDC Vault](http://www.gdcvault.com/)
+- [Game maths tutorials](http://www.wildbunny.co.uk/blog/vector-maths-a-primer-for-games-programmers/)
 
 ## Contact me
 * Email: bryan.duggan@dit.ie
 * Twitter: [@skooter500](http://twitter.com/skooter500)
 * [My website & other ways to contact me](http://bryanduggan.org)
 
-## Web Resources
-- [Unity Tutorials](https://unity3d.com/learn/tutorials) 
-- [GDC Vault](http://www.gdcvault.com/)
-- [Game maths tutorials](http://www.wildbunny.co.uk/blog/vector-maths-a-primer-for-games-programmers/)
 
 ## Previous years courses
 - 2017-2018
@@ -48,7 +47,7 @@
 
 ### Learning Outcomes
 - Sign up for the class Facebook page
-- Find and use the UNity tutorials
+- Find the Unity tutorials
 - Test your knowledge of Unity
 - Create gameobjects in the scene view
 - Create gameobjects from code
@@ -56,8 +55,8 @@
 - Use colliders
 
 ### Instructions
-- Sign up for the class Facebook page
-- Check out the Unity tutorial videos
+- Sign up for the [class Facebook page](https://www.facebook.com/groups/2228012700814097/)
+- Check out the [Unity tutorial videos](https://unity3d.com/learn/tutorials)
 
 Today you can test your knowledge of Unity by making this:
 
