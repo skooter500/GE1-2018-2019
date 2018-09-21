@@ -41,4 +41,42 @@
 - Week 12 - CA Submission & Demo - 40%
 
 ## Week 1 - Introduction to Unity
+## Lecture
 - [Slides](https://drive.google.com/drive/folders/1CeMUWjCUa1Ere2fMmtLz5TCL4O136mxj?usp=sharing)
+
+## Lab
+
+### Learning Outcomes
+- Sign up for the class Facebook page
+- Find and use the UNity tutorials
+- Test your knowledge of Unity
+- Create gameobjects in the scene view
+- Create gameobjects from code
+- Handle user input
+- Use colliders
+
+### Instructions
+- Sign up for the class Facebook page
+- Check out the Unity tutorial videos
+
+Today you can test your knowledge of Unity by making this:
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/B3dSCruPi_s?ecver=2" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
+What's happening:
+
+- The tank is made from two cubes. The turrent is parented to the body of the tank
+- A material is used to color the tank blue
+- A TankController script controlls tank movement which can use either a game controller or the keyboard
+- The tank can fire bullets, which get removed from the scene after 5 seconds
+- The camera will follow the tank in the style of a third person game
+- The wall is made procedurally and physically simulated
+- The player tank can crash into the wall and the bullets can damage the wall
+- The bricks in the wall are randomly coloured
+
+A few additional points
+
+- The solution to this lab is in a branch of the git repo. *Do not be tempted to look at until you have watched the tutorial videos and tried to do it yourself first*
+- The aim of this lab is for me to see what the general level of Unity programming in the class is
+- If you have never used Unity before, start by watching a few of the tutoriel videos
+- See how far you can get with the lab today, but don't be too concerned if you can't finish it. We will make this project in the class next week together and you will discover the awesome power of Unity game engine
