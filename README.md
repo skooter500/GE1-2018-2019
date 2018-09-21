@@ -77,5 +77,5 @@ A few additional points
 
 - The solution to this lab is in a branch of the git repo. *Do not be tempted to look at until you have watched the tutorial videos and tried to do it yourself first*
 - The aim of this lab is for me to see what the general level of Unity programming in the class is
-- If you have never used Unity before, start by watching a few of the tutoriel videos
+- If you have never used Unity before, start by watching a few of the tutorial videos
 - See how far you can get with the lab today, but don't be too concerned if you can't finish it. We will make this project in the class next week together and you will discover the awesome power of Unity game engine
