@@ -2,7 +2,7 @@
 
 ## Resources
 - [Class Facebook page](https://www.facebook.com/groups/2228012700814097/)
-- [Course Notes](https://drive.google.com/drive/folders/1HbqIE6_hwy0osMKDmEG5GgOAUeGy7NXV?usp=sharing)
+- [Course Notes](https://drive.google.com/open?id=1CeMUWjCUa1Ere2fMmtLz5TCL4O136mxj)
 - [Previous lab tests](https://1drv.ms/u/s!Ak7y2552PWCrkNACJ7n8qiU8UPRs9w)
 - [Assignment](assignment.md)
 - [A build of Infinite Forms](https://drive.google.com/open?id=1-uQZ4sXe51rlda7OPd3M6NyeTsrte2b6)
@@ -36,12 +36,18 @@
     - https://github.com/skooter500/XNA-3D-Steering-Behaviours-for-Space-Ships
 	
 ## Assessment Schedule	
-- Week 4 - CA proposal & Git repo - 10%
-- Week 12 - CA Submission & Demo - 40%
+- Week 5 - CA proposal & Git repo - 10%
+- Week 13 - CA Submission & Demo - 40%
 
-## Week 1 - Introduction to Unity
+## Week 2 - The Unity Maths
 ## Lecture
-- [Slides](https://drive.google.com/drive/folders/1CeMUWjCUa1Ere2fMmtLz5TCL4O136mxj?usp=sharing)
+- [Slides](https://drive.google.com/file/d/14pWZNf2Z-FX096wCLHt9t6tLorS323-k/view?usp=sharing)
+- Solution to last weeks lab is in scene1
+
+
+## Week 1 - Introduction
+## Lecture
+- [Slides](https://drive.google.com/file/d/14pWZNf2Z-FX096wCLHt9t6tLorS323-k/view?usp=sharing)
 
 ## Lab
 
