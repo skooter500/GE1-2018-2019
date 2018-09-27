@@ -39,11 +39,44 @@
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
 
-## Week 2 - The Unity Maths
+## Week 2 - Unity Maths - Trigonometry & Vectors
 ## Lecture
 - [Slides](https://drive.google.com/file/d/14pWZNf2Z-FX096wCLHt9t6tLorS323-k/view?usp=sharing)
 - Solution to last weeks lab is in scene1
 
+## Lab
+### Learning Outcomes
+- Build a simple agent with perception
+- Develop computation thinking
+- Use trigonometry
+- Use vectors
+- Use the Unity API
+- Practice C#
+
+### Instructions
+
+Today you will be making this:
+
+[![YouTube](http://img.youtube.com/vi/kC_W1WBB7uY/0.jpg)](http://www.youtube.com/watch?v=kC_W1WBB7uY)
+
+What is happening:
+- The red tank has a script attached that has radius and numWaypoints fields that control the generation of waypoints in a circle around it. It draws sphere gizmos so you can see where the waypoints will be.
+- The red tank will follow the waypoints starting at the 0th one and looping back when it reaches the last waypoint.
+- The red tank prints the messages using the Unity GUI system to indicate:
+    - Whether the blue tank is in front or behind
+    - Whether the front tank is inside a 45 degree FOV
+
+Things to try:
+
+Try to recreate or improve upon one of the following systems in Infinite Forms:
+
+- Sway/Harmonic rotator
+- Spine animator
+- FishAnimator
+- CreatureGenerator
+- TentacleCreatureGenereator
+
+Clone/get the repo for the course and create a new branch for your work today. Call it lab2. There are a few things pre-setup you can can use to get started.
 
 ## Week 1 - Introduction
 ## Lecture
