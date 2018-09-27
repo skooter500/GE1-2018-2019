@@ -43,6 +43,13 @@
 ## Lecture
 - [Slides](https://drive.google.com/file/d/14pWZNf2Z-FX096wCLHt9t6tLorS323-k/view?usp=sharing)
 - Solution to last weeks lab is in scene1
+- [Trigonometry problem set](https://1.cdn.edl.io/IDqRlI8C9dRkoqehbbdHBrcGT6m87gkCQuMKTkp0U7JvHvuG.pdf)
+- Infinite Forms systems
+    - Sway/Harmonic rotator
+    - Spine animator
+    - FishAnimator
+    - CreatureGenerator
+    - TentacleCreatureGenereator
 
 ## Lab
 ### Learning Outcomes
