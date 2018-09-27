@@ -17,7 +17,8 @@ public class EnemyTankController : MonoBehaviour {
 
     public void OnGUI()
     {
-        GUI.Label(new Rect(0, 0, Screen.width, Screen.height), "" + message, style);    
+        GUI.color = Color.white;
+        GUI.Label(new Rect(0, 0, Screen.width, Screen.height), "" + message);    
         if (Event.current.type == EventType.Repaint)
         {
             message.Length = 0;
@@ -55,10 +56,10 @@ public class EnemyTankController : MonoBehaviour {
             pos = transform.TransformPoint(pos);
             waypoints.Add(pos);
         }
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update () {
         Vector3 toTarget = waypoints[current] - transform.position;
         if (toTarget.magnitude < 1)
         {
@@ -78,8 +79,8 @@ public class EnemyTankController : MonoBehaviour {
             Log("Player is in front");
         }
         float angle = Mathf.Acos(Vector3.Dot(transform.forward, toPlayer) / toPlayer.magnitude) * Mathf.Rad2Deg;
-        Log("Angle to player 1: " + angle * Mathf.Rad2Deg);
-        Log("Angle to player 2: " + Vector3.Angle(transform.forward, toPlayer));
+        Log("Angle to player 1: " + angle);
+        //Log("Angle to player 2: " + Vector3.Angle(transform.forward, toPlayer));
         if (angle < 45)
         {
             Log("Player is inside the FOV");
