@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TankController : MonoBehaviour {
 
+    [Range(0, 360)]
     public float rotationSpeed = 180f;
     public float moveSpeed = 20.0f;
 

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour {
 
+    public int height = 10;
 	// Use this for initialization
 	void Start () {
-        CreateWall(10, 10);
+        CreateWall(10, height);
 	}
 
     void CreateWall(int width, int height)
@@ -21,7 +22,7 @@ public class Wall : MonoBehaviour {
                 cube.AddComponent<Rigidbody>();
                 float x = col * gap;
                 float y = 0.5f + (row * gap);
-                cube.transform.rotation = Quaternion.identity;
+                
                 cube.transform.position = transform.TransformPoint(new Vector3(x, y, 0));
                 cube.GetComponent<Renderer>().material.color = Color.HSVToRGB(Random.Range(0.0f, 1.0f), 1, 0.8f);
                 cube.transform.parent = this.transform;
