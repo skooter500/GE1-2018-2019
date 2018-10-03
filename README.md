@@ -91,6 +91,8 @@
 | Quaternion.Slerp | |
 | Quaternion.Identity | |
 | Quaternion.Euler | |
+| Quaternion.Inverse | |
+| x, y, z, w | |
 
 
 
