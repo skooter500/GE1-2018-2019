@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 m_EditorVersion: 2018.2.10f1
 =======
 m_EditorVersion: 2018.2.5f1
 >>>>>>> lab2solution
+=======
+m_EditorVersion: 2018.2.8f1
+>>>>>>> e586f4a4f8d3a1b6c9a8107c1254ce76b452bf2f
