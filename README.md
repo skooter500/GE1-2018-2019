@@ -43,6 +43,7 @@
 - [Slides](https://drive.google.com/file/d/14pWZNf2Z-FX096wCLHt9t6tLorS323-k/view?usp=sharing)
 - Solution to last weeks lab is in scene2
 - Sway example we did is in scene3
+- [Vectors in Unity](https://docs.unity3d.com/Manual/UnderstandingVectorArithmetic.html)
 
 ### Unity API Quick Reference
 
@@ -77,8 +78,8 @@
 | gameObject.GetComponent<> | To return a component attached to a gameobject. Uses generics. Returns null if there is no component attached |
 | gameObject.AddComponent<> | Retuns the new component |
 | gameObject.GetComponentInChildren | Recursive search |
-| GameObject.FindGameObjectWithTag | |
-| GameObject.FindGameObjectsWithTag | |
+| GameObject.FindGameObjectWithTag<> | Returns the first matching object |
+| GameObject.FindGameObjectsWithTag<> | Returns a typed array of objects |
 | GameObject.CreatePrimitive | Creates cubes, spheres, cylinders etc |
 | GameObject.Destroy | Pass in the gameobject or component you want to distroy |
 | GameObject.FindObjectOfType |  Searches the memory space for an instance of a class |
