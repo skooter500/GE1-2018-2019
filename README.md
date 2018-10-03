@@ -44,7 +44,9 @@
 - Solution to last weeks lab is in scene2
 - Sway example we did is in scene3
 
-| API Call | Note |
+### Unity API Quick Reference
+
+| API | Note |
 |----------|------|
 | Random.Range | Random number between 2 numbers. Make sure to use approproatly typed parameters! (floats or ints) |
 | Random.insideUnitCircle | Random Vector2 of unit length |
