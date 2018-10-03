@@ -13,12 +13,17 @@ public class Sway : MonoBehaviour {
         axis = Random.insideUnitSphere;
         axis.y = 0;
         axis.Normalize();
-	}
+
+        // Uncomment to use the job system
+        SwayManager.Instance.Add(this.transform, axis);
+    }
 	
-	// Update is called once per frame
+    // Comment out to use the job system
+    /*
 	void Update () {
         transform.localRotation = Quaternion.AngleAxis(
             Mathf.Sin(theta) * angle, axis);
         theta += frequency * Time.deltaTime * Mathf.PI * 2.0f;
 	}
+    */
 }

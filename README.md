@@ -39,7 +39,64 @@
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
 
-## Week 2 - The Unity Maths
+## Week 3 - Vectors & Quaternions
+- [Slides](https://drive.google.com/file/d/14pWZNf2Z-FX096wCLHt9t6tLorS323-k/view?usp=sharing)
+- Solution to last weeks lab is in scene2
+- Sway example we did is in scene3
+
+| API Call | Note |
+|----------|------|
+| transform.position | |
+| transform.rotation | |
+| transform.localScale |
+| transform.localPosition | |
+| transform.localRotation | |
+| transform.Translate | Can use local or world space |
+| transform.Rotate | Can use local or world space |
+| transform.RotateAround | |
+| transform.RotateAroundLocal | |
+| transform.SetParent | |
+| transform.up | |
+| transform.right | |
+| transform.forward | |
+| transform.TransformPoint | |
+| transform.TransformDirection | |
+| transform.forward | |
+| gameObject.SetActive | |
+| gameObject.name | |
+| gameObject.Tag | |
+| gameObject.layer | |
+| gameObject.GetComponent | |
+| gameObject.AddComponent | |
+| gameObject.GetComponentInChildren | |
+| GameObject.FindGameObjectWithTag | |
+| GameObject.FindGameObjectsWithTag | |
+| GameObject.CreatePrimitive | |
+| GameObject.Destroy | |
+| GameObject.FindObjectOfType | |
+| Vector3.Dot | |
+| Vector3.Lerp | |
+| Vector3.Cross | |
+| Vector3.Normalize | |
+| Vector3.Up | |
+| Vector3.Right | |
+| Vector3.Forward | |
+| Vector3.Zero | |
+| Vector3.One | |
+| Vector3.Lerp | |
+| Vector3.Distance | |
+| x, y, z, | Note vectors are value types! (Structs) |
+| vector3.normalized | |
+| Quaternion.AngleAxis | |
+| Quaternion.Slerp | |
+| Quaternion.Identity | |
+| Quaternion.Euler | |
+
+
+
+
+
+## Week 2 - Trigonometry
 ## Lecture
 - [Slides](https://drive.google.com/file/d/14pWZNf2Z-FX096wCLHt9t6tLorS323-k/view?usp=sharing)
 - Solution to last weeks lab is in scene1
