@@ -89,6 +89,9 @@ public class FPSController : MonoBehaviour
             Fly(-Time.deltaTime * speed);
         }
 
+        Vector3 a = new Vector3();
+        a.x = 10;
+
 
 
         mouseX = Input.GetAxis("Mouse X");
