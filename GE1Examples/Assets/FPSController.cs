@@ -8,7 +8,7 @@ public class FPSController : MonoBehaviour
     public GameObject mainCamera;
     public float speed = 50.0f;
 
-    public bool vrMode = true;
+    public bool allowPitch = true;
 
     // Use this for initialization
     void Start()
@@ -99,14 +99,11 @@ public class FPSController : MonoBehaviour
             
 
         Yaw(mouseX * speed * Time.deltaTime);
-        Pitch(- mouseY * speed * Time.deltaTime);
+        if (allowPitch)
+        {
+            Pitch(-mouseY * speed * Time.deltaTime);
+        }
 
-        /*float joyX = Input.GetAxis("Joy X");
-        float joyY = Input.GetAxis("Joy Y");
-
-        Yaw(joyX * speed * Time.deltaTime);
-        Fly(-joyY * speed * Time.deltaTime);
-        */
         float contWalk = Input.GetAxis("Vertical");
         float contStrafe = Input.GetAxis("Horizontal");
         Walk(contWalk * speed * Time.deltaTime);
