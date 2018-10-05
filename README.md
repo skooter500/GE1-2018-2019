@@ -85,9 +85,9 @@ Open up scene4. There is the red tank following it's circular path (solution fro
         - Enable the FPS controller
         - Enable the RotateMe script
 
+I may have left out some steps, but you can figure out the rest yourself        
+
 Use the [Unity Quick Reference](unityref.md) and the [Unity online documentation](https://docs.unity3d.com/ScriptReference/) to look up anything you need  
-
-
 ## Week 2 - Trigonometry
 ## Lecture
 - [Slides](https://drive.google.com/file/d/14pWZNf2Z-FX096wCLHt9t6tLorS323-k/view?usp=sharing)
