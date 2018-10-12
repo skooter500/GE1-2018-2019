@@ -38,8 +38,9 @@
 ## Assessment Schedule	
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
-## Week 4 - Vectors & a little bit on Quaternions
+## Week 4 - More Quaternions
 
+[![YouTube](http://img.youtube.com/vi/N5PDboNJwks/0.jpg)](http://www.youtube.com/watch?v=N5PDboNJwks)
 
 ## Lab
 ### Learning Outcomes
