@@ -38,12 +38,44 @@
 ## Assessment Schedule	
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
+## Week 4 - Vectors & a little bit on Quaternions
 
-## Week 3 - Vectors & Quaternions
+
+## Lab
+### Learning Outcomes
+- Use quaternions to create two Unity systems
+
+In todays lab you will be making two systems in Unity:
+
+[![YouTube](http://img.youtube.com/vi/IXySkVFNhdk/0.jpg)](http://www.youtube.com/watch?v=utJ5uUouxuA)
+
+The first system is a turret AI system for a game such as a tower defence game. In the video below, the red "tower" will turn to face the players tank and start shooting as soon as the player comes in range. To create this system:
+
+- Make the turret from two cubes and set a spawn point for bullets on the turret
+- Add a TurretController component to the turret. Add fields for rotationSpeed and fireRate (and any others you might need)
+- Use a SphereCollider on the turret and set isTrigger to be true
+- Override OnTriggerEnter and OnTriggerStay to detect the player
+- Use quaternions to rotate the turret
+- Use a co-routine to shoot multiple times per second
+
+The second system is the tentacle system
+- Make an empty gameobject and add a TentacleGenerator component. Add a field for the number of segments and any prefabs you need (I suggest one for the segment of the tentacle that oscillates and one for the bits that follow the oscillation). Use TransformPoint in your solution
+- The "head" of the tentacle should oscillate. You can use teh sway script for this
+- You can make a script called SpineAnimator and attach it to the head. 
+- In Start:
+    - Get the list of segments store these in a ```List<Transform>```
+    - Calculate the offset to the previous segment in local space, store these in a ```List<Vector3>```
+- In Update:
+    - Calculate the wantedPosition for each segment by transforming the offset by the previous segments transform
+    - Calculate the wantedQuaternion (use Quaternion.LookRotation)
+    - Lerp the position and quaternions
+
+## Week 3 - Vectors & a little bit on Quaternions
 - [Slides on vectors & trigonometry](https://drive.google.com/file/d/14pWZNf2Z-FX096wCLHt9t6tLorS323-k/view?usp=sharing)
 - [Slides on quaternions](https://drive.google.com/file/d/11-KFbodaAl9dRSs9ljzdDyTDp1QWWnsZ/view?usp=sharing)
 - Solution to last weeks lab is in scene2
 - Sway example we did is in scene3
+- CubeMove example is in scene4. Example of dot product of vectors
 - [Vectors in Unity](https://docs.unity3d.com/Manual/UnderstandingVectorArithmetic.html)
 - [Quaternions in Unity](https://docs.unity3d.com/Manual/UnderstandingVectorArithmetic.html)
 - [Unity API Quick reference](unityref.md)

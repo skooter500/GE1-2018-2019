@@ -7,13 +7,15 @@ public class Sway : MonoBehaviour {
     public float frequency;
 
     public float theta;
-    public Vector3 axis;
+    public Vector3 axis = Vector3.zero;
 	// Use this for initialization
 	void Start () {
-        axis = Random.insideUnitSphere;
-        axis.y = 0;
-        axis.Normalize();
-
+        if (axis == Vector3.zero)
+        {
+            axis = Random.insideUnitSphere;
+            axis.y = 0;
+            axis.Normalize();
+        }
         // Uncomment to use the job system
         SwayManager.Instance.Add(this.transform, axis);
     }
