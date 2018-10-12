@@ -40,6 +40,8 @@
 - Week 13 - CA Submission & Demo - 40%
 ## Week 4 - More Quaternions
 
+[![YouTube](http://img.youtube.com/vi/IXySkVFNhdk/0.jpg)](http://www.youtube.com/watch?v=IXySkVFNhdk)
+
 [![YouTube](http://img.youtube.com/vi/N5PDboNJwks/0.jpg)](http://www.youtube.com/watch?v=N5PDboNJwks)
 
 ## Lab
@@ -48,7 +50,7 @@
 
 In todays lab you will be making two systems in Unity:
 
-[![YouTube](http://img.youtube.com/vi/IXySkVFNhdk/0.jpg)](http://www.youtube.com/watch?v=utJ5uUouxuA)
+[![YouTube](http://img.youtube.com/vi/utJ5uUouxuA/0.jpg)](http://www.youtube.com/watch?v=utJ5uUouxuA)
 
 The first system is a turret AI system for a game such as a tower defence game. In the video below, the red "tower" will turn to face the players tank and start shooting as soon as the player comes in range. To create this system:
 
@@ -82,8 +84,6 @@ The second system is the tentacle system
 - [Unity API Quick reference](unityref.md)
 
 Quaternions in Unity:
-
-[![YouTube](http://img.youtube.com/vi/IXySkVFNhdk/0.jpg)](http://www.youtube.com/watch?v=IXySkVFNhdk)
 
 An ode to Quaternions:
 
