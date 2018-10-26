@@ -51,6 +51,8 @@
 
 In this weeks lab you can create a procedural octopus similar to this one:
 
+[![YouTube](http://img.youtube.com/vi/9pMuNGh8dek/0.jpg)](http://www.youtube.com/watch?v=9pMuNGh8dek)
+
 ### Part 1
 
 You can use the tentacle system we developed to instiantiate 8 tentacles in a circular configuration. Use a prefab for the tentacle that uses the tentacle generator and also a prefab for the head that uses a sphere.
@@ -59,6 +61,8 @@ You can use the tentacle system we developed to instiantiate 8 tentacles in a ci
 ### Part 2
 
 Enable and disable the C# job system on the tentacles. This has to be done before the project is built and run You can't change it at runtime. See how many octopuses you can create both with and without using the C# job system implementation and maintain a minimum of 90 FPS
+
+Note: There is a bug in the job system implementation you will need to address before you can do part 2
 
 
 ## Week 5 - Physics
