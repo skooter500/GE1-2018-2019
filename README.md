@@ -39,8 +39,33 @@
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
 
+## Week 6 - Unity Systems
+- The tentacle system
+- Controllers
+- The rainbow caterpillar
+
+## Lab
+### Learning Outcomes
+- Use trigonometry
+- learn how to profile a Unity system
+
+In this weeks lab you can create a procedural octopus similar to this one:
+
+### Part 1
+
+You can use the tentacle system we developed to instiantiate 8 tentacles in a circular configuration. Use a prefab for the tentacle that uses the tentacle generator and also a prefab for the head that uses a sphere.
+
+
+### Part 2
+
+Enable and disable the C# job system on the tentacles. This has to be done before the project is built and run You can't change it at runtime. See how many octopuses you can create both with and without using the C# job system implementation and maintain a minimum of 90 FPS
+
+
 ## Week 5 - Physics
 ## Lecture
+- [Physics 1](https://drive.google.com/open?id=1rYFVCwmL81sEUD-b-Nt-1lmMKw-4XDi0)
+- [Physics 2](https://drive.google.com/open?id=1ZGWsmDz9uIJEUf2HPBV2JyYxv1RswPar)
+- [Physics 3](https://drive.google.com/open?id=1Tncqb27Cg8LpqHqrtSfcZlgeqTo-HpE8)
 
 ## Lab
 ### Learning Outcomes
@@ -68,6 +93,7 @@ What is happening:
     - Add fields for spring and damper values. I used values of 100 and 50
     - In update, use addTorque to add rotational force to the rigidBodies. Use a variable to control which segment get the torque and you can use another variable speed to control how fast the contraction moves along the creatures body
 
+Start with scene6
 Unity API's you can use in your solution:
 
 - GameObject.Instantiate

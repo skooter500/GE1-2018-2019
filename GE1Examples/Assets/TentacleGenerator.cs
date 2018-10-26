@@ -15,6 +15,14 @@ public class TentacleGenerator : MonoBehaviour {
         {
             Vector3 lp = offset * i;
             GameObject prefab = (i == 0) ? headPrefab : segmentPrefab;
+            if (i == 0)
+            {
+                prefab = headPrefab;
+            }
+            else
+            {
+                prefab = segmentPrefab;
+            }
             GameObject segment = GameObject.Instantiate<GameObject>(prefab);
             segment.transform.position = transform.TransformPoint(lp);
             segment.transform.rotation = transform.rotation;

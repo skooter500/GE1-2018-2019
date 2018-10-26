@@ -14,7 +14,7 @@ public class SpineAnimator : MonoBehaviour {
             if (i > 0)
             {
                 Transform prev = transform.parent.GetChild(i - 1);                
-                offsets.Add(Quaternion.Inverse(transform.rotation) * (current.transform.position - prev.transform.position));
+                offsets.Add((current.transform.position - prev.transform.position));
             }
             children.Add(current);
         }
