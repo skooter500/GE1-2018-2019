@@ -137,11 +137,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1217598173}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9af76258b1cac8846800d69c3ae98ae0, type: 3}
+  m_Script: {fileID: 11500000, guid: 74912b7ccd079f04898b22cf638f3fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 1807678010101328, guid: 299f94a08d27b1846a4b12873a6ae960, type: 2}
-  wormPrefab: {fileID: 1407978702347480, guid: e3f92bc711fc15b4b8d1edbcbd2d6836, type: 2}
+  wormPrefab: {fileID: 1407978702347480, guid: e92ac462523a14144bfd056c41e8680e, type: 2}
   player: {fileID: 1221297981}
   groundLM:
     serializedVersion: 2
