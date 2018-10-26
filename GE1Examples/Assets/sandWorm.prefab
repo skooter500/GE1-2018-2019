@@ -51,13 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009942fae249f6544a94310e7e9773b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodySegments: 10
-  radius: 50
+  bodySegments: 20
+  radius: 2
   gravity: 1
   spring: 100
   damper: 50
-  force: 100
-  speed: 1
+  force: 150
+  speed: 6
   headtail: 2
   current: 0
   moving: 0
