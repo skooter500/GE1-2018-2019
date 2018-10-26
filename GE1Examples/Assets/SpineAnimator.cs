@@ -12,7 +12,6 @@ public class SpineAnimator : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        offsets.Add(Vector3.zero);
         for (int i = 0; i < transform.parent.childCount; i++)
         {
             Transform current = transform.parent.GetChild(i);
@@ -20,8 +19,8 @@ public class SpineAnimator : MonoBehaviour {
             {
                 Transform prev = transform.parent.GetChild(i - 1);
                 offsets.Add((current.transform.position - prev.transform.position));
-            }
-            children.Add(current);
+                children.Add(current);
+            }            
         }
         if (useSpineAnimatorSystem)
         {
@@ -35,9 +34,9 @@ public class SpineAnimator : MonoBehaviour {
         {
             return;
         }
-        for (int i = 1; i < children.Count; i++)
+        for (int i = 0; i < children.Count; i++)
         {
-            Transform prev = children[i - 1];
+            Transform prev = (i == 0) ? this.transform : children[i - 1];
             Transform current = children[i];
             Vector3 wantedPosition = prev.TransformPointUnscaled(offsets[i]);
             Quaternion wantedRotation = prev.rotation;

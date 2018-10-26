@@ -17,15 +17,14 @@ public class Sway : MonoBehaviour {
             axis.Normalize();
         }
         // Uncomment to use the job system
-        SwayManager.Instance.Add(this.transform, axis);
+        //SwayManager.Instance.Add(this.transform, axis);
     }
 	
     // Comment out to use the job system
-    /*
+    
 	void Update () {
         transform.localRotation = Quaternion.AngleAxis(
             Mathf.Sin(theta) * angle, axis);
         theta += frequency * Time.deltaTime * Mathf.PI * 2.0f;
-	}
-    */
+	}    
 }
