@@ -905,12 +905,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1550005413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cac18d7fe95a30f4abe8717752e49f99, type: 3}
+  m_Script: {fileID: 11500000, guid: 3670be93e4bf85d4bb312b0b4efcaa71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  camera: {fileID: 0}
-  rotSpeed: 90
+  mainCamera: {fileID: 0}
+  speed: 50
+  allowPitch: 1
 --- !u!4 &1550005415
 Transform:
   m_ObjectHideFlags: 0
