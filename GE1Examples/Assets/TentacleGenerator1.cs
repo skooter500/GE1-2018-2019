@@ -20,6 +20,8 @@ public class TentacleGenerator1 : MonoBehaviour {
             //segment.transform.position = // transform.TransformPoint(pos);
             segment.transform.rotation = transform.rotation;
             segment.transform.parent = this.transform;
+            segment.GetComponent<Renderer>().material.color =
+                Color.HSVToRGB(i / (float)numSegments, 1, 1);
         }
 	}
 	

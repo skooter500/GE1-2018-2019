@@ -10,7 +10,23 @@ public class HeadRotator : MonoBehaviour {
 		
 	}
 
-    float theta = 0;
+    private void OnEnable()
+    {
+        StartCoroutine(VaryTentacles());
+    }
+
+    IEnumerator VaryTentacles()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(2.0f, 5.0f));
+            frequency = Random.Range(0.1f, 0.5f);
+            angle = Random.Range(10.0f, 70f);
+        }
+    }
+
+
+    public float theta = 0;
 	// Update is called once per frame
 	void Update () {
         

@@ -121,4 +121,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 20
-  frequency: 1
+  frequency: 0.5
+  theta: 0
