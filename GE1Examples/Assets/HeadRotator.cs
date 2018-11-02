@@ -13,9 +13,14 @@ public class HeadRotator : MonoBehaviour {
     float theta = 0;
 	// Update is called once per frame
 	void Update () {
+        
         transform.localRotation =
             Quaternion.AngleAxis(
                 Mathf.Sin(theta) * angle, Vector3.right);
+        /*
+         * transform.rotation = Quaternion.AngleAxis(
+                Mathf.Sin(theta) * angle, transform.right);
+            */
 
         theta += frequency * Mathf.PI * 2.0f * Time.deltaTime;
 	}

@@ -10,7 +10,6 @@ public class SwayManager : MonoBehaviour {
     TransformAccessArray transforms;
     SwayJob job;
     JobHandle jh;
-
     
     NativeArray<Vector3> axis;
 
