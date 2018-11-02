@@ -35,17 +35,6 @@ public class SandWorm : MonoBehaviour {
             float d = damper;
 
             float mass = 1.0f;
-            if (i < headtail)
-            {
-
-                r = radius * Mathf.Pow(0.6f, (headtail - i));
-                mass = Mathf.Pow(0.6f, (headtail - i));
-            }
-            if (i > bodySegments - headtail - 1)
-            {
-                r = radius * Mathf.Pow(0.8f, i - (bodySegments - headtail - 1));
-               mass = Mathf.Pow(0.8f, i - (bodySegments - headtail - 1));
-            }
             GameObject bodyPart = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Rigidbody rb = bodyPart.AddComponent<Rigidbody>();
             rb.useGravity = gravity;
