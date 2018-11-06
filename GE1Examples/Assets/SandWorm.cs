@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SandWorm : MonoBehaviour {
     public int bodySegments = 10;
-    public float radius = 50;
+    public float size = 50;
     public bool gravity = true;
 
     public float spring = 100;
@@ -26,14 +26,11 @@ public class SandWorm : MonoBehaviour {
 
     void Create()
     { 
-        float depth = radius * 0.1f;
+        float depth = size * 0.05f;
         Vector3 start = - Vector3.forward * bodySegments * depth * 2;
         GameObject previous = null;
         for (int i = 0; i < bodySegments; i++)
-        {
-            float r = radius;
-            float d = damper;
-
+        {            
             float mass = 1.0f;
             GameObject bodyPart = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Rigidbody rb = bodyPart.AddComponent<Rigidbody>();
@@ -43,7 +40,7 @@ public class SandWorm : MonoBehaviour {
             bodyPart.transform.position = transform.TransformPoint(pos);
             bodyPart.transform.rotation = transform.rotation;
             bodyPart.transform.parent = this.transform;           
-            bodyPart.transform.localScale = new Vector3(r * 2, r * 2, depth);
+            bodyPart.transform.localScale = new Vector3(size, size, depth);
             bodyPart.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             bodyPart.GetComponent<Renderer>().receiveShadows = false;
 
@@ -53,21 +50,19 @@ public class SandWorm : MonoBehaviour {
             {
                 HingeJoint j = bodyPart.AddComponent<HingeJoint>();
                 j.connectedBody = previous.GetComponent<Rigidbody>();
-                j.autoConfigureConnectedAnchor = false;
+                j.autoConfigureConnectedAnchor = true;
                 j.axis = Vector3.right;
-                j.anchor = new Vector3(0, 0, - 2f);
-                j.connectedAnchor = new Vector3(0, 0, 2f);
                 j.useSpring = true;
                 JointSpring js = j.spring;
                 js.spring = spring;
-                js.damper = d;
+                js.damper = damper;
                 j.spring = js;
             }            
             previous = bodyPart;
         }
     }
 
-    public float force = 100;
+    public float torque = 100;
     
    
     private float offset = 0;
@@ -87,7 +82,7 @@ public class SandWorm : MonoBehaviour {
 
     public void Animate()
     {
-        float f = force;
+        float f = torque;
         Rigidbody rb = transform.GetChild((int) current).GetComponent<Rigidbody>();
         /*if (current >= transform.childCount - start)
         {
