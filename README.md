@@ -39,10 +39,26 @@
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
 
-## Week 6 - Unity Systems
+## Week8 - Procedural terrain using Perlin Noise
+- Meshes
+- Making the terrain from a sin wave
+- Perlin Noise
+- Mesh collider
+- Shaders
+- HSB Colours
+
+## Lab
+
+Take the code we wrote in the class and here are some suggested modifications you can make:
+
+- Make the terrain infinite by creating a grid of game objects each one generating a part of the terrain. When the player move across the terrain, move and regenerate the terrain around the player
+- Check out GetSpectrumData. See if you can generate the terrain from an audiosource
+
+## Week 7 - Unity Systems
 - The tentacle system
-- Controllers
-- The rainbow caterpillar
+- Procedural octopus example
+
+## Week 6 - Unity Systems
 
 ## Lab
 ### Learning Outcomes
