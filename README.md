@@ -49,10 +49,11 @@
 
 ## Lab
 
-Take the code we wrote in the class and here are some suggested modifications you can make:
+Take the code we wrote in the class and here are some suggested modifications you can make. Try one of these or use your imagination and come up with something cool:
 
 - Make the terrain infinite by creating a grid of game objects each one generating a part of the terrain. When the player move across the terrain, move and regenerate the terrain around the player
 - Check out GetSpectrumData. See if you can generate the terrain from an audiosource
+- Make a texture using Conway's Game of Life and texture the terrain with it
 
 ## Week 7 - Unity Systems
 - The tentacle system
