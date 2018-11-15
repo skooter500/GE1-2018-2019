@@ -34,9 +34,7 @@ public class TerrainGen : MonoBehaviour {
         MeshRenderer mr = gameObject.AddComponent<MeshRenderer>();
 
         MakeTexture();
-
-
-
+        
         m = mf.mesh;
 
         int verticesPerQuad = 4;
@@ -67,11 +65,12 @@ public class TerrainGen : MonoBehaviour {
                 vertices[vertex++] = tr;
                 vertices[vertex++] = br;
 
+                float f = (row + 1) / (float)numQuads;
                 uvs[startVertex] = new Vector2(col / (float) numQuads, row / (float) numQuads);
                 uvs[startVertex + 1] = new Vector2(col / (float) numQuads, (row + 1)/ (float) numQuads);
                 uvs[startVertex + 2] = new Vector2((col + 1) / (float) numQuads, (row + 1) / (float) numQuads);
                 uvs[startVertex + 3] = new Vector2((col + 1)/ (float) numQuads, row / (float) numQuads);
-
+                Debug.Log(uvs[startVertex + 1]);
 
                 triangles[triangleVertex++] = startVertex;
                 triangles[triangleVertex++] = startVertex + 1;
