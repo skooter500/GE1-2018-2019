@@ -56,7 +56,7 @@ MonoBehaviour:
   gravity: 1
   spring: 100
   damper: 50
-  force: 150
+  torque: 100
   speed: 6
   headtail: 2
   current: 0
