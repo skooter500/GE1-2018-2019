@@ -64,6 +64,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c1403f1099ac246a6d63a3fdec0027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numQuads: 50
-  meshMaterial: {fileID: 2100000, guid: 8acdbdd4a8af22b4fab9d618b7915642, type: 2}
+  quadsPerTile: 10
+  meshMaterial: {fileID: 2100000, guid: 404db883fe071d14ab76a7eee9e14616, type: 2}
   amplitude: 50

@@ -39,6 +39,21 @@
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
 
+## Week 9 - Infinite Procedural & a shader
+- Making UV's
+- Making smart tiles
+- Algorithm for infinite terrain
+
+[![YouTube](http://img.youtube.com/vi/dycHQFEz8VI/0.jpg)](http://www.youtube.com/watch?v=dycHQFEz8VI)
+
+## Lab
+## Learning outcomes
+- Understand the terrain generation code better
+
+Here are some suggested modifications you can make to the terrain
+
+
+
 ## Week8 - Procedural terrain using Perlin Noise
 - Meshes
 - Making the terrain from a sin wave

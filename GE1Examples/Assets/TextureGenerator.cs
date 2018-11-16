@@ -9,12 +9,12 @@ public class TextureGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         tt = GetComponent<TerrainTile>();
-        texture = new Texture2D(tt.numQuads, tt.numQuads);
-        for (int x = 0; x < tt.numQuads; x++)
+        texture = new Texture2D(tt.quadsPerTile, tt.quadsPerTile);
+        for (int x = 0; x < tt.quadsPerTile; x++)
         {
-            for (int y = 0; y < tt.numQuads; y++)
+            for (int y = 0; y < tt.quadsPerTile; y++)
             {
-                float h = (x + y) / (float)(tt.numQuads * 2.0f);
+                float h = (x + y) / (float)(tt.quadsPerTile * 2.0f);
 
                 texture.SetPixel(x, y, Color.HSVToRGB(h, 1, 1));
             }

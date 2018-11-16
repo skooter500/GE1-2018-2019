@@ -32,25 +32,28 @@ public class SandWorm : MonoBehaviour {
         for (int i = 0; i < bodySegments; i++)
         {            
             float mass = 1.0f;
-            GameObject bodyPart = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            Rigidbody rb = bodyPart.AddComponent<Rigidbody>();
+            GameObject segment = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            Rigidbody rb = segment.AddComponent<Rigidbody>();
             rb.useGravity = gravity;
             rb.mass = mass;
+            segment.name = "segment " + i;
             Vector3 pos = start + (Vector3.forward * depth * 4 * i);
-            bodyPart.transform.position = transform.TransformPoint(pos);
-            bodyPart.transform.rotation = transform.rotation;
-            bodyPart.transform.parent = this.transform;           
-            bodyPart.transform.localScale = new Vector3(size, size, depth);
-            bodyPart.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-            bodyPart.GetComponent<Renderer>().receiveShadows = false;
+            segment.transform.position = transform.TransformPoint(pos);
+            segment.transform.rotation = transform.rotation;
+            segment.transform.parent = this.transform;           
+            segment.transform.localScale = new Vector3(size, size, depth);
+            segment.GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            segment.GetComponent<Renderer>().receiveShadows = false;
 
-            bodyPart.GetComponent<Renderer>().material.color = Color.HSVToRGB(i / (float)bodySegments, 1, 1);
+            segment.GetComponent<Renderer>().material.color = Color.HSVToRGB(i / (float)bodySegments, 1, 1);
 
             if (previous != null)
             {
-                HingeJoint j = bodyPart.AddComponent<HingeJoint>();
+                HingeJoint j = segment.AddComponent<HingeJoint>();
                 j.connectedBody = previous.GetComponent<Rigidbody>();
-                j.autoConfigureConnectedAnchor = true;
+                j.autoConfigureConnectedAnchor = false;
+                j.anchor = new Vector3(0, 0, -2f);
+                j.connectedAnchor = new Vector3(0, 0, 2f);
                 j.axis = Vector3.right;
                 j.useSpring = true;
                 JointSpring js = j.spring;
@@ -58,7 +61,7 @@ public class SandWorm : MonoBehaviour {
                 js.damper = damper;
                 j.spring = js;
             }            
-            previous = bodyPart;
+            previous = segment;
         }
     }
 
