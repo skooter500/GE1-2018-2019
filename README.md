@@ -53,6 +53,7 @@ Here are some suggested modifications you can make to the infinite terrain gener
 - There is a bug in the mesh updating code that only shows up when you tile the terrain and make it infinite. Try it out and see if you can track the bug down
 - There is another bug that happens when you move the infinite terrain on the Y axis. Fix it!
 - Try using additive perllin noise to generate the terrain. To do this you will have to add several Perlin noise functions together to generate the y value
+- Try generating the UV's in the shader from the x and z coordinates of the world space coordinates 
 - Try procedurally texturing the terrain with Conway's Game of life. You can try generating the UV's in the shader rather than using the UV's of the mesh
 - Make a gizmo for the Infinite Terrain Generator so that you can preview the generated meshes in Unity. To do this, you will have to do two things:
     - Make a method OnDrawGizmos in on the InfiniteTerrain class

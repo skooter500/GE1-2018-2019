@@ -14,8 +14,8 @@ public class TerrainTile : MonoBehaviour {
 
     // Use this for initialization
     void Awake() {
-        MeshFilter mf = gameObject.AddComponent<MeshFilter>();
-        MeshRenderer mr = gameObject.AddComponent<MeshRenderer>();
+        MeshFilter mf = gameObject.AddComponent<MeshFilter>(); // Container for the mesh
+        MeshRenderer mr = gameObject.AddComponent<MeshRenderer>(); // Draw
 
         m = mf.mesh;
 
@@ -110,7 +110,7 @@ public class TerrainTile : MonoBehaviour {
         }
         m.vertices = vertices;
         t += Time.deltaTime;
-        //m.RecalculateNormals();
+        m.RecalculateNormals();
 	}
     
 }
