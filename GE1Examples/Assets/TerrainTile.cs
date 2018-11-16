@@ -16,7 +16,7 @@ public class TerrainTile : MonoBehaviour {
     void Awake() {
         MeshFilter mf = gameObject.AddComponent<MeshFilter>(); // Container for the mesh
         MeshRenderer mr = gameObject.AddComponent<MeshRenderer>(); // Draw
-
+        MeshCollider mc = gameObject.AddComponent<MeshCollider>();
         m = mf.mesh;
 
         int verticesPerQuad = 4;
@@ -78,6 +78,9 @@ public class TerrainTile : MonoBehaviour {
         m.triangles = triangles;        
         m.RecalculateNormals();
         mr.material = meshMaterial;
+        mc.sharedMesh = m;
+        mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+        mr.receiveShadows = true;
 	}
 
     float Map(float a, float b, float c, float d, float e)
@@ -90,7 +93,7 @@ public class TerrainTile : MonoBehaviour {
 
     float SampleCell(float x, float y)
     {
-        return Mathf.PerlinNoise(x / 10, y / 10) * 20;
+        return Mathf.PerlinNoise(10000 + x / 50, 10000 + y / 50) * amplitude;
         /*
         return Mathf.Sin(Map(x, 0, numQuads, 0, Mathf.PI))
             * Mathf.Sin(Map(y, 0, numQuads, 0, Mathf.PI)) * 40;
@@ -101,7 +104,7 @@ public class TerrainTile : MonoBehaviour {
     float t = 0;
 	// Update is called once per frame   
     
-        /*
+    /*        
 	void Update () {
         Vector3[] vertices = m.vertices;
         for (int i = 0; i < vertices.Length; i++)
@@ -109,7 +112,7 @@ public class TerrainTile : MonoBehaviour {
             vertices[i].y = SampleCell(transform.position.x + vertices[i].x, transform.position.z + vertices[i].z + t);
         }
         m.vertices = vertices;
-        t += Time.deltaTime;
+        //t += Time.deltaTime;
         m.RecalculateNormals();
 	}
     */
