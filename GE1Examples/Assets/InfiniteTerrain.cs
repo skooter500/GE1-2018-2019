@@ -32,10 +32,8 @@ public class InfiniteTerrain : MonoBehaviour {
     Queue<GameObject> oldGameObjects = new Queue<GameObject>();
     Dictionary<string, Tile> tiles = new Dictionary<string, Tile>();
 
-    private System.Collections.IEnumerator GenerateWorldAroundPlayer()
-    {
-        yield return null;
-
+    private IEnumerator GenerateWorldAroundPlayer()
+    {        
         // Make sure this happens at once at the start
         int xMove = int.MaxValue;
         int zMove = int.MaxValue;

@@ -65,5 +65,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quadsPerTile: 10
-  meshMaterial: {fileID: 2100000, guid: 404db883fe071d14ab76a7eee9e14616, type: 2}
+  meshMaterial: {fileID: 2100000, guid: 505d7095b7c3ae94d9d9d1694a66e48b, type: 2}
   amplitude: 50

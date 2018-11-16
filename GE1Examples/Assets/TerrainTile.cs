@@ -19,14 +19,16 @@ public class TerrainTile : MonoBehaviour {
 
         m = mf.mesh;
 
-        int verticesPerQuad = 6;
+        int verticesPerQuad = 4;
         Vector3[] vertices = new Vector3[verticesPerQuad * quadsPerTile * quadsPerTile];
         Vector2[] uv = new Vector2[verticesPerQuad * quadsPerTile * quadsPerTile];
 
-        int[] triangles = new int[verticesPerQuad * quadsPerTile * quadsPerTile];
+        int vertexTriangesPerQuad = 6;
+        int[] triangles = new int[vertexTriangesPerQuad * quadsPerTile * quadsPerTile];
 
         Vector3 bottomLeft = new Vector3(-quadsPerTile / 2, 0, -quadsPerTile / 2);
         int vertex = 0;
+        int triangleVertex = 0;
         float minY = float.MaxValue;
         float maxY = float.MinValue;
         for (int row = 0; row < quadsPerTile; row++)
@@ -41,26 +43,23 @@ public class TerrainTile : MonoBehaviour {
                 int startVertex = vertex;
                 vertices[vertex++] = bl;
                 vertices[vertex++] = tl;
-                vertices[vertex++] = br;
-
-                vertices[vertex++] = br;
-                vertices[vertex++] = tl;
                 vertices[vertex++] = tr;
+                vertices[vertex++] = br;
+                               
 
                 vertex = startVertex;
                 float fNumQuads = quadsPerTile;
                 uv[vertex++] = new Vector2(col / fNumQuads, row / fNumQuads);
                 uv[vertex++] = new Vector2(col / fNumQuads, (row + 1) / fNumQuads);
+                uv[vertex++] = new Vector2((col + 1) / fNumQuads, (row + 1) / fNumQuads);
                 uv[vertex++] = new Vector2((col + 1) / fNumQuads, row / fNumQuads);
 
-                uv[vertex++] = new Vector2((col + 1) / fNumQuads, row / fNumQuads);
-                uv[vertex++] = new Vector2(col / fNumQuads, (row + 1)/ fNumQuads);
-                uv[vertex++] = new Vector2((col + 1)/ fNumQuads, (row + 1)/ fNumQuads);
-
-                for (int i = 0; i < 6; i++)
-                {
-                    triangles[startVertex + i] = startVertex + i;
-                }
+                triangles[triangleVertex++] = startVertex;
+                triangles[triangleVertex++] = startVertex + 1;
+                triangles[triangleVertex++] = startVertex + 3;
+                triangles[triangleVertex++] = startVertex + 3;
+                triangles[triangleVertex++] = startVertex + 1;
+                triangles[triangleVertex++] = startVertex + 2;
 
                 if (bl.y > maxY)
                 {
@@ -102,6 +101,7 @@ public class TerrainTile : MonoBehaviour {
     float t = 0;
 	// Update is called once per frame   
     
+        /*
 	void Update () {
         Vector3[] vertices = m.vertices;
         for (int i = 0; i < vertices.Length; i++)
@@ -112,5 +112,5 @@ public class TerrainTile : MonoBehaviour {
         t += Time.deltaTime;
         m.RecalculateNormals();
 	}
-    
+    */
 }
