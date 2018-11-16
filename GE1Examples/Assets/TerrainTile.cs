@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TerrainGen : MonoBehaviour {
+public class TerrainTile : MonoBehaviour {
 
     public int numQuads = 10;
 
@@ -13,17 +13,18 @@ public class TerrainGen : MonoBehaviour {
     Mesh m;
 
     // Use this for initialization
-    void Start() {
+    void Awake() {
         MeshFilter mf = gameObject.AddComponent<MeshFilter>();
         MeshRenderer mr = gameObject.AddComponent<MeshRenderer>();
 
         m = mf.mesh;
 
         int verticesPerQuad = 6;
-        int vertexCount = verticesPerQuad * numQuads * numQuads;
+        Vector3[] vertices = new Vector3[verticesPerQuad * numQuads * numQuads];
+        Vector2[] uv = new Vector2[verticesPerQuad * numQuads * numQuads];
 
-        Vector3[] vertices = new Vector3[vertexCount];
-        int[] triangles = new int[vertexCount];
+        int vertexTriangles = 6;
+        int[] triangles = new int[verticesPerQuad * numQuads * numQuads];
 
         Vector3 bottomLeft = new Vector3(-numQuads / 2, 0, -numQuads / 2);
         int vertex = 0;
@@ -31,18 +32,29 @@ public class TerrainGen : MonoBehaviour {
         {
             for (int col = 0; col < numQuads; col++)
             {
-                Vector3 bl = bottomLeft + new Vector3(col, SampleCell(col, row), row);
-                Vector3 tl = bottomLeft + new Vector3(col, SampleCell(col, row + 1), row + 1);
-                Vector3 tr = bottomLeft + new Vector3(col + 1, SampleCell(col + 1, row + 1), row + 1);
-                Vector3 br = bottomLeft + new Vector3(col + 1, SampleCell(col + 1, row), row);
+                Vector3 bl = bottomLeft + new Vector3(col, SampleCell(transform.position.x + col, transform.position.z + row), row);
+                Vector3 tl = bottomLeft + new Vector3(col, SampleCell(transform.position.x + col, transform.position.z + row + 1), row + 1);
+                Vector3 tr = bottomLeft + new Vector3(col + 1, SampleCell(transform.position.x + col + 1, transform.position.z + row + 1), row + 1);
+                Vector3 br = bottomLeft + new Vector3(col + 1, SampleCell(transform.position.x + col + 1, transform.position.z + row), row);
 
                 int startVertex = vertex;
                 vertices[vertex++] = bl;
                 vertices[vertex++] = tl;
                 vertices[vertex++] = br;
+
                 vertices[vertex++] = br;
                 vertices[vertex++] = tl;
                 vertices[vertex++] = tr;
+
+                vertex = startVertex;
+                float fNumQuads = numQuads;
+                uv[vertex++] = new Vector2(col / fNumQuads, row / fNumQuads);
+                uv[vertex++] = new Vector2(col / fNumQuads, (row + 1) / fNumQuads);
+                uv[vertex++] = new Vector2((col + 1) / fNumQuads, row / fNumQuads);
+
+                uv[vertex++] = new Vector2((col + 1) / fNumQuads, row / fNumQuads);
+                uv[vertex++] = new Vector2(col / fNumQuads, (row + 1)/ fNumQuads);
+                uv[vertex++] = new Vector2((col + 1)/ fNumQuads, (row + 1)/ fNumQuads);
 
                 for (int i = 0; i < 6; i++)
                 {
@@ -51,6 +63,7 @@ public class TerrainGen : MonoBehaviour {
             }
         }
         m.vertices = vertices;
+        m.uv = uv;
         m.triangles = triangles;        
         m.RecalculateNormals();
         mr.material = meshMaterial;
@@ -84,5 +97,6 @@ public class TerrainGen : MonoBehaviour {
         }
         m.vertices = vertices;
         t += Time.deltaTime;
+        m.RecalculateNormals();
 	}
 }
