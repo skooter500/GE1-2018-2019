@@ -101,7 +101,7 @@ public class TerrainTile : MonoBehaviour {
 
     float t = 0;
 	// Update is called once per frame   
-    /*
+    
 	void Update () {
         Vector3[] vertices = m.vertices;
         for (int i = 0; i < vertices.Length; i++)
@@ -110,7 +110,7 @@ public class TerrainTile : MonoBehaviour {
         }
         m.vertices = vertices;
         t += Time.deltaTime;
-        m.RecalculateNormals();
+        //m.RecalculateNormals();
 	}
-    */
+    
 }
