@@ -232,7 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 1735666773132284, guid: 7b54028530caa9f4b8fda9b14ee75a70, type: 2}
   player: {fileID: 1827118467}
-  halfTile: 5
+  halfTile: 10
 --- !u!1 &1107974544
 GameObject:
   m_ObjectHideFlags: 0

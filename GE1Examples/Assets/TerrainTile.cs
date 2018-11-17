@@ -93,7 +93,8 @@ public class TerrainTile : MonoBehaviour {
 
     float SampleCell(float x, float y)
     {
-        return Mathf.PerlinNoise(10000 + x / 50, 10000 + y / 50) * amplitude;
+        return (Mathf.PerlinNoise(10000 + x / 100, 10000 + y / 100) * 100)
+            + (Mathf.PerlinNoise(10000 + x / 5, 10000 + y / 5) * 2);
         /*
         return Mathf.Sin(Map(x, 0, numQuads, 0, Mathf.PI))
             * Mathf.Sin(Map(y, 0, numQuads, 0, Mathf.PI)) * 40;
