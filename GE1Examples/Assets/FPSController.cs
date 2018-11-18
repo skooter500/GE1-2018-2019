@@ -7,6 +7,7 @@ public class FPSController : MonoBehaviour
 {
     public GameObject mainCamera;
     public float speed = 50.0f;
+    public float lookSpeed = 150.0f;
 
     public bool allowPitch = true;
 
@@ -89,19 +90,24 @@ public class FPSController : MonoBehaviour
             Fly(-Time.deltaTime * speed);
         }
 
-        Vector3 a = new Vector3();
-        a.x = 10;
+        if (Input.GetKey(KeyCode.Joystick1Button5))
+        {
+            Fly(speed * Time.deltaTime);
+        }
 
-
+        if (Input.GetKey(KeyCode.Joystick1Button4))
+        {
+            Fly(-speed * Time.deltaTime);
+        }
 
         mouseX = Input.GetAxis("Mouse X");
         mouseY = Input.GetAxis("Mouse Y");
             
 
-        Yaw(mouseX * speed * Time.deltaTime);
+        Yaw(mouseX * lookSpeed * Time.deltaTime);
         if (allowPitch)
         {
-            Pitch(-mouseY * speed * Time.deltaTime);
+            Pitch(-mouseY * lookSpeed * Time.deltaTime);
         }
 
         float contWalk = Input.GetAxis("Vertical");

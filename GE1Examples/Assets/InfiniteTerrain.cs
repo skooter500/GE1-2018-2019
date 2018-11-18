@@ -5,15 +5,20 @@ using UnityEngine;
 public class InfiniteTerrain : MonoBehaviour {
     public GameObject tilePrefab;
     public Transform player;
-    private int quadsPerTile;
+    public int quadsPerTile;
 
     public int halfTile = 5;
 
     // Use this for initialization
     void Start()
     {
-        quadsPerTile = tilePrefab.GetComponent<TerrainTile>().quadsPerTile;
 
+        TerrainTile tt = tilePrefab.GetComponent<TerrainTile>();
+        if (tt != null)
+        {
+            quadsPerTile = tt.quadsPerTile;
+        }
+        
         if (player == null)
         {
             player = Camera.main.transform;
@@ -77,6 +82,7 @@ public class InfiniteTerrain : MonoBehaviour {
                 foreach (Vector3 pos in newTiles)
                 {
                     GameObject t = GameObject.Instantiate<GameObject>(tilePrefab, pos, Quaternion.identity);
+                    t.transform.parent = this.transform;
                     string tilename = "Tile_" + ((int)(pos.x)).ToString() + "_" + ((int)(pos.z)).ToString();
                     t.name = tilename;
                     Tile tile = new Tile(t, updateTime);
