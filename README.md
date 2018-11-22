@@ -39,6 +39,9 @@
 - Week 5 - CA proposal & Git repo - 10%
 - Week 13 - CA Submission & Demo - 40%
 
+## Week 10 - Audio responsive elements
+- [Frequency range explained](https://www.teachmeaudio.com/mixing/techniques/audio-spectrum/)
+
 ## Week 9 - Infinite Procedural & a shader
 - Making UV's
 - Making smart tiles
