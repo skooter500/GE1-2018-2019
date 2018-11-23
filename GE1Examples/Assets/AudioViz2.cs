@@ -43,7 +43,7 @@ public class AudioViz2 : MonoBehaviour {
     void Update () {
         for (int i = 0; i < elements.Count; i++) {
             Vector3 ls = elements[i].transform.localScale;
-            ls.y = Mathf.Lerp(ls.y, 1 + AudioAnalyzer.bands[i] * scale, Time.deltaTime * 5.0f);
+            ls.y = Mathf.Lerp(ls.y, 1 + AudioAnalyzer.normalisedBands[i] * scale, Time.deltaTime * 3.0f);
             elements[i].transform.localScale = ls;
         }
 	}

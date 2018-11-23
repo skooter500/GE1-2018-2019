@@ -139,11 +139,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e582a12e539d56a419ca633a37f82901, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -249,6 +249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f345234c94f89434cb2aca8b57f66b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useMic: 0
+  clip: {fileID: 8300000, guid: e582a12e539d56a419ca633a37f82901, type: 3}
+  amgMic: {fileID: 243875917746723874, guid: c6b6ce41c555afe4e92a66203b6fee36, type: 2}
+  amgMaster: {fileID: 24300002, guid: c6b6ce41c555afe4e92a66203b6fee36, type: 2}
+  selectedDevice: 
   binWidth: 0
   sampleRate: 0
 --- !u!1 &1206495949
@@ -479,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b8c66ca7fb8a524ab211151c933a9f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 10
+  scale: 20
   radius: 10
 --- !u!4 &1610579571
 Transform:
