@@ -18,14 +18,8 @@ public class AudioAnalyzer : MonoBehaviour {
     public static float[] spectrum;
     public static float[] bands;
 
-    public static float[] bandBuffer;
-    float[] bufferDecrease;
-
     public float binWidth;
     public float sampleRate;
-
-    float[] bandHighest;
-    public static float[] normalisedBands;
     
     /*
      * 20-60 - Subbase
@@ -42,14 +36,7 @@ public class AudioAnalyzer : MonoBehaviour {
         a = GetComponent<AudioSource>();
         spectrum = new float[frameSize];
         bands = new float[(int) Mathf.Log(frameSize, 2)];
-        //bands = new float[8];
         
-        bandBuffer = new float[bands.Length];
-        bufferDecrease = new float[bands.Length];
-
-        bandHighest = new float[bands.Length];
-        normalisedBands = new float[bands.Length];
-
         if (useMic)
         {
             if (Microphone.devices.Length > 0)
@@ -68,80 +55,53 @@ public class AudioAnalyzer : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
-        
+    void Start () {        
         sampleRate = AudioSettings.outputSampleRate;
         binWidth = AudioSettings.outputSampleRate / 2 / frameSize;
-        int last = 0;
     }
-
-    // See:
-    // https://www.youtube.com/watch?v=mHk3ZiKNH48
-
-    void GetBandBuffer()
-    {
-        for (int i = 0; i < bands.Length; i++)
-        {
-            if (bands[i] > bandBuffer[i])
-            {
-                bandBuffer[i] = bands[i];
-                bufferDecrease[i] = 0.005f;
-            }
-            else if (bands[i] < bandBuffer[i])
-            {
-                bandBuffer[i] -= bufferDecrease[i];
-                bufferDecrease[i] *= 1.2f;
-            }
-        }
-    }
-
-    void GetNormalizedBands()
-    {
-        for (int i = 0; i < bands.Length; i++)
-        {
-            if (bands[i] > bandHighest[i])
-            {
-                bandHighest[i] = bands[i];
-            }
-            if (bandHighest[i] != 0)
-            {
-                normalisedBands[i] = bands[i] / bandHighest[i];
-            }
-        }
-    }
-
     
     /*
-        void GetFrequencyBands()
-        {
-            int count = 0;
+     * This is the method from the youtube video tutorial. 
+     * It has a couple of problems
+     * Firstly, there are 7 psychoacoustic bands subbass to brilliance
+     * This algorithm creates 8 bands. The frequency range of the 8 bands also 
+     * dont match up to the frequency range of the 7 psychoacoustic bands
+     * Also it uses a binWidth of 43Hz, but the actual bin width is
+     * AudioSettings.outputSampleRate / 2 / frameSize;
+     * Which on my computer is 46Hz because AudioSettings.outputSampleRate is
+     * 48000 instead of 44100. 
+     * See also https://docs.unity3d.com/ScriptReference/AudioSource.GetSpectrumData.html
+    /*
+       void GetFrequencyBands()
+       {
+           int count = 0;
 
-            // 22050 / 512 = 43Hz per sample?
-            float binWidth = 43;
-            for (int i = 0; i < 8; i++)
-            {
-                float average = 0;
-                int sampleCount = (int)Mathf.Pow(2, i) * 2;
-                if (i == 7)
-                {
-                    sampleCount += 2;
-                }
-                int nextCount = count + (sampleCount);
-                //Debug.Log(i + "\t" + count + "\t" + nextCount + "\t" + (count * binWidth) + "\t" + nextCount * binWidth);
+           // 22050 / 512 = 43Hz per sample?
+           float binWidth = 43;
+           for (int i = 0; i < 8; i++)
+           {
+               float average = 0;
+               int sampleCount = (int)Mathf.Pow(2, i) * 2;
+               if (i == 7)
+               {
+                   sampleCount += 2;
+               }
+               int nextCount = count + (sampleCount);
+               //Debug.Log(i + "\t" + count + "\t" + nextCount + "\t" + (count * binWidth) + "\t" + nextCount * binWidth);
 
-                for (int j = 0; j < sampleCount; j++)
-                {
-                average += spectrum[count] * (count + 1);
-                    count++;
-                }
-                average /= count;
-                bands[i] = average;
-            }
-        }
-        */
+               for (int j = 0; j < sampleCount; j++)
+               {
+               average += spectrum[count] * (count + 1);
+                   count++;
+               }
+               average /= count;
+               bands[i] = average;
+           }
+       }
+       */
 
-    
-        void GetFrequencyBands()
+
+    void GetFrequencyBands()
     {        
         for (int i = 0; i < bands.Length; i++)
         {
@@ -151,7 +111,7 @@ public class AudioAnalyzer : MonoBehaviour {
             float average = 0;
             for (int j = start; j < end; j++)
             {
-                average += spectrum[j];
+                average += spectrum[j] * (j + 1);
             }
             average /= (float) width;
             bands[i] = average;
@@ -165,7 +125,5 @@ public class AudioAnalyzer : MonoBehaviour {
     void Update () {
         a.GetSpectrumData(spectrum, 0, FFTWindow.Blackman);
         GetFrequencyBands();
-        GetBandBuffer();
-        GetNormalizedBands();
     }
 }
