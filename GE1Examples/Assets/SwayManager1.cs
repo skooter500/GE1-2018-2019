@@ -70,6 +70,7 @@ public class SwayManager1 : MonoBehaviour {
 
 public struct SwayJob1 : IJobParallelForTransform
 {
+    
     public NativeArray<float> theta;
     public float frequency;
     public float angle;

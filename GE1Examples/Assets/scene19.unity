@@ -140,9 +140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2705e74e940016944983e0e63f4dde44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis: {x: 0, y: 0, z: 0}
-  angle: 0
-  frequency: 0
+  axis: {x: 1, y: 0, z: 0}
+  angle: 20
+  frequency: 1
 --- !u!4 &449683928
 Transform:
   m_ObjectHideFlags: 0

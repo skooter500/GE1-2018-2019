@@ -37,13 +37,12 @@ GameObject:
   - component: {fileID: 4776772296009752}
   - component: {fileID: 33094181544964994}
   - component: {fileID: 23885481558842450}
-  - component: {fileID: 95654448948926192}
   m_Layer: 0
   m_Name: infinite Forms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &4610695962166420
 Transform:
@@ -114,24 +113,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1375557375250816}
   m_Mesh: {fileID: 4300000, guid: df9131e49ac84eb46abe3564b19e34d3, type: 3}
---- !u!95 &95654448948926192
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1375557375250816}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: df9131e49ac84eb46abe3564b19e34d3, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114148418673250926
 MonoBehaviour:
   m_ObjectHideFlags: 1
