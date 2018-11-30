@@ -22,9 +22,11 @@ public class Sway : MonoBehaviour {
 	
     // Comment out to use the job system
     
+        
 	void Update () {
         transform.localRotation = Quaternion.AngleAxis(
             Mathf.Sin(theta) * angle, axis);
         theta += frequency * Time.deltaTime * Mathf.PI * 2.0f;
 	}    
+    
 }

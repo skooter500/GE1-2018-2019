@@ -17,7 +17,7 @@ public class SwayManager : MonoBehaviour {
     public float frequency;
     public float angle;
 
-    int maxJobs = 5000;
+    int maxJobs = 10000;
     int numJobs = 0;
 
     public static SwayManager Instance = null;
