@@ -24,6 +24,7 @@ public class SwayManager1 : MonoBehaviour {
 
     public void Add(Sway sway)
     {
+        transforms.capacity = transforms.length + 1;
         transforms.Add(sway.transform);
         theta[numJobs] = 0;
         numJobs++;
@@ -32,7 +33,7 @@ public class SwayManager1 : MonoBehaviour {
     private void Awake()
     {
         Instance = this;
-        transforms = new TransformAccessArray(maxJobs);
+        transforms = new TransformAccessArray(0, -1);
         theta = new NativeArray<float>(maxJobs, Allocator.Persistent);
     }
 
@@ -60,6 +61,7 @@ public class SwayManager1 : MonoBehaviour {
         };
 
         jh = job.Schedule(transforms);
+        JobHandle.ScheduleBatchedJobs();
 	}
 
     private void LateUpdate()
@@ -67,7 +69,6 @@ public class SwayManager1 : MonoBehaviour {
         jh.Complete();
     }
 }
-
 public struct SwayJob1 : IJobParallelForTransform
 {
     
