@@ -33,6 +33,8 @@ Becomes:
 
 ```
 
+## Assignment brief
+
 Your assignment is to create an impressive, beautiful and awe inspiring system in Unity by using procedural generation wherever possible. Paint a picture in code. Your aim is to wow me. It should look like a tech demo or some of the beautiful visuals that you might see at en electronic music event. Check these out for examples:
 
 [![YouTube](http://img.youtube.com/vi/rY4-qhGhJIE/0.jpg)](https://www.youtube.com/watch?v=rY4-qhGhJIE)
