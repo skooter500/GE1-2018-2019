@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f345234c94f89434cb2aca8b57f66b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useMic: 1
+  useMic: 0
   clip: {fileID: 8300000, guid: e582a12e539d56a419ca633a37f82901, type: 3}
   amgMic: {fileID: 243875917746723874, guid: c6b6ce41c555afe4e92a66203b6fee36, type: 2}
   amgMaster: {fileID: 24300002, guid: c6b6ce41c555afe4e92a66203b6fee36, type: 2}

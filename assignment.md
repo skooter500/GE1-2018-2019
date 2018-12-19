@@ -1,5 +1,38 @@
 # Games Engines 1 Assignment 2018-2019
 
+Here is the schedule for assignment demos on Thursday 20th December:
+
+- ![Assignment demo schedule](https://docs.google.com/spreadsheets/d/1G6AfIQ3DA1Zrer4ad5SAIaeP4AJ3z7twe85HPtuNXBw/edit?usp=sharing)
+
+Please submit your final git assignment repo links here before 10am on Thursday 20th December:
+
+- ![Assignment submission](https://docs.google.com/forms/d/e/1FAIpQLSfKiOxW70HF9rRYQeE_QDWbflndTwRuGhqw5NfZPZiUFsVVcA/viewform)
+
+Please include a detailed readme.md in your git repo. Here is [a tutorial about md](https://guides.github.com/features/mastering-markdown/) files if you need any help with formatting. In order to help me grade the assignments include in your readme:
+
+- A detailed description of what your assignment does and how it works
+- Which parts of the assignmemnt you developed yourself vs parts that come from the examples we made on the course or that come from tutorials
+- What you are most proud of about the assignment 
+- Instructions for building and running (if necessary)
+- Include an embedded youtube video of the assignment in the readme.md and also submit the Youtube video link in the submission form. If you are on Windows 10 you can press Windows Key, Alt and R to take a video. [This is how you can capture videos if you are on a Mac](https://www.cnbc.com/2018/05/20/how-to-record-the-screen-on-my-mac.html). Also you can use [OBS](https://obsproject.com/).
+
+This is an example of how you can embed a youtube video in a markdown file:
+
+```
+[![YouTube](http://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+```
+
+For example, this URL: 
+
+https://www.youtube.com/watch?v=ii049d7UFrg
+
+Becomes:
+
+```
+[![YouTube](http://img.youtube.com/vi/ii049d7UFrg/0.jpg)](https://www.youtube.com/watch?v=ii049d7UFrg)
+
+```
+
 Your assignment is to create an impressive, beautiful and awe inspiring system in Unity by using procedural generation wherever possible. Paint a picture in code. Your aim is to wow me. It should look like a tech demo or some of the beautiful visuals that you might see at en electronic music event. Check these out for examples:
 
 [![YouTube](http://img.youtube.com/vi/rY4-qhGhJIE/0.jpg)](https://www.youtube.com/watch?v=rY4-qhGhJIE)
