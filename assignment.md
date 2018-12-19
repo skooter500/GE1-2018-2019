@@ -2,7 +2,7 @@
 
 Here is the schedule for assignment demos on Thursday 20th December:
 
-- [Assignment demo schedule](https://docs.google.com/spreadsheets/d/1G6AfIQ3DA1Zrer4ad5SAIaeP4AJ3z7twe85HPtuNXBw/edit?usp=sharing)
+- [Assignment demo schedule](https://docs.google.com/spreadsheets/d/18GeuLIz7CcxspD8XjO_DulVPKGyDjNVbRQm4CBW_tRs/edit?usp=sharing)
 
 Please submit your final git assignment repo links here before 10am on Thursday 20th December:
 
