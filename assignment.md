@@ -2,11 +2,11 @@
 
 Here is the schedule for assignment demos on Thursday 20th December:
 
-- ![Assignment demo schedule](https://docs.google.com/spreadsheets/d/1G6AfIQ3DA1Zrer4ad5SAIaeP4AJ3z7twe85HPtuNXBw/edit?usp=sharing)
+- [Assignment demo schedule](https://docs.google.com/spreadsheets/d/1G6AfIQ3DA1Zrer4ad5SAIaeP4AJ3z7twe85HPtuNXBw/edit?usp=sharing)
 
 Please submit your final git assignment repo links here before 10am on Thursday 20th December:
 
-- ![Assignment submission](https://docs.google.com/forms/d/e/1FAIpQLSfKiOxW70HF9rRYQeE_QDWbflndTwRuGhqw5NfZPZiUFsVVcA/viewform)
+- [Assignment submission](https://docs.google.com/forms/d/e/1FAIpQLSfKiOxW70HF9rRYQeE_QDWbflndTwRuGhqw5NfZPZiUFsVVcA/viewform)
 
 Please include a detailed readme.md in your git repo. Here is [a tutorial about md](https://guides.github.com/features/mastering-markdown/) files if you need any help with formatting. In order to help me grade the assignments include in your readme:
 
