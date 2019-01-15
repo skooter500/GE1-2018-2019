@@ -1,6 +1,8 @@
 # Games Engines 1 Assignment 2018-2019
 
-Here is the schedule for assignment demos on Thursday 20th December:
+- [Assignment results](https://docs.google.com/spreadsheets/d/1tIXTe9XybH8hHd6iIW9lSh81nz23FoEn7A_eiahoRpM/edit?usp=sharing)
+
+Here is the schedule for assignment demos on Thursday 20th December. Please arrive 15 minutes in advance of your demo and have your project open in unity and your github project open in a web browser.
 
 - [Assignment demo schedule](https://docs.google.com/spreadsheets/d/18GeuLIz7CcxspD8XjO_DulVPKGyDjNVbRQm4CBW_tRs/edit?usp=sharing)
 
