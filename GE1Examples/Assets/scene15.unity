@@ -220,7 +220,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 1141294488648020, guid: 191b2ff03ecef3a4381191300aee3f37, type: 2}
   player: {fileID: 1827118467}
   quadsPerTile: 10
-  halfTile: 10
+  halfTile: 50
 --- !u!4 &1038981879
 Transform:
   m_ObjectHideFlags: 0

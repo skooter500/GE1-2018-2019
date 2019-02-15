@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.005
@@ -219,6 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 1208306789640508, guid: 60a009b0c4e7d6c48b7d3338856b3f44, type: 2}
   player: {fileID: 1827118467}
+  quadsPerTile: 0
   halfTile: 10
 --- !u!4 &903564021
 Transform:
@@ -329,6 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 558100129}
   speed: 50
+  lookSpeed: 150
   allowPitch: 1
 --- !u!4 &1827118467
 Transform:
