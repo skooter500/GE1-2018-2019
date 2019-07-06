@@ -14,7 +14,7 @@ public class SwayManager1 : MonoBehaviour {
     public float angle;
     public float frequency;
 
-    int maxJobs = 10000;
+    int maxJobs = 30000;
     int numJobs = 0;
 
     SwayJob1 job;
@@ -22,7 +22,7 @@ public class SwayManager1 : MonoBehaviour {
 
     public static SwayManager1 Instance;
 
-    public void Add(Sway sway)
+    public void Add(GameObject sway)
     {
         transforms.capacity = transforms.length + 1;
         transforms.Add(sway.transform);
@@ -61,7 +61,7 @@ public class SwayManager1 : MonoBehaviour {
         };
 
         jh = job.Schedule(transforms);
-        JobHandle.ScheduleBatchedJobs();
+        //JobHandle.ScheduleBatchedJobs();
 	}
 
     private void LateUpdate()

@@ -1,5 +1,8 @@
 # DT228/DT211/DT282/DT508 Games Engines 1 2018-2019
 
+[![Video](http://img.youtube.com/vi/NMDupdv85FE/0.jpg)](http://www.youtube.com/watch?NMDupdv85FE)
+
+
 ## Resources
 - [Class Facebook page](https://www.facebook.com/groups/2228012700814097/)
 - [Course Notes](https://drive.google.com/open?id=1CeMUWjCUa1Ere2fMmtLz5TCL4O136mxj)
